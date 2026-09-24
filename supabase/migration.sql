@@ -203,5 +203,6 @@ ALTER PUBLICATION supabase_realtime ADD TABLE tickets;
 -- ============================================================
 
 -- INSERT INTO barbers (user_id, name, is_online) VALUES
---   ('AUTH_USER_UUID_1', 'أحمد', true),
---   ('AUTH_USER_UUID_2', 'محمد', false);
+--   ('AUTH_USER_UUID_1', 'مؤمن عطيفه', true),
+--   ('AUTH_USER_UUID_2', 'مهند عطيفه', true),
+--   ('AUTH_USER_UUID_3', 'محمد عطيفه', true);
