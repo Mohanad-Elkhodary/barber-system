@@ -5,7 +5,7 @@
 
 const messages = {
   common: {
-    appName: 'دورك',
+    appName: 'STYLE',
     loading: 'جاري التحميل...',
     error: 'حصل خطأ، جرب تاني',
     online: 'متاح',
@@ -17,8 +17,8 @@ const messages = {
   },
 
   customer: {
-    title: 'احجز دورك',
-    subtitle: 'اختار الحلاق واحجز مكانك في الطابور',
+    title: 'احجز دورك في STYLE',
+    subtitle: 'اختار الحلاق واحجز مكانك — خدمة مميزة بأسلوب راقي',
     selectBarber: 'اختار الحلاق',
     nowServing: 'بيخدم دلوقتي',
     waiting: 'مستنيين',
