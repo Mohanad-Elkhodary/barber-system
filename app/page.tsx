@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { startTransition } from 'react';
 import { createClient } from '@/app/lib/supabase/client';
 import type { BarberWithQueue, Ticket, Barber } from '@/app/lib/types';
@@ -116,7 +117,39 @@ export default function HomePage() {
           animate={{ opacity: 1, y: 0 }}
         >
           <div className="logo">
-            <StyleLogo size={48} showText />
+            <StyleLogo size={46} showText />
+          </div>
+
+          <div className="header-actions">
+            <Link
+              href="/display"
+              className="btn-header btn-header-ghost"
+              title="شاشة العرض للمحل"
+            >
+              <span>📺</span>
+              <span className="hidden-mobile">شاشة المحل</span>
+            </Link>
+
+            <Link
+              href="/login"
+              className="btn-header btn-header-login"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                <polyline points="10 17 15 12 10 7" />
+                <line x1="15" y1="12" x2="3" y2="12" />
+              </svg>
+              <span>دخول الحلاق</span>
+            </Link>
           </div>
         </motion.header>
 
@@ -173,6 +206,34 @@ export default function HomePage() {
             ))}
           </div>
         )}
+
+        {/* Footer */}
+        <footer className="footer">
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
+            <StyleLogo size={24} />
+            <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
+              © {new Date().getFullYear()} STYLE Barbershop — جميع الحقوق محفوظة
+            </span>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
+            <Link
+              href="/display"
+              className="text-secondary"
+              style={{ fontSize: '0.8125rem' }}
+            >
+              📺 شاشة العرض
+            </Link>
+            <span style={{ color: 'var(--border-glass)' }}>•</span>
+            <Link
+              href="/login"
+              className="text-gold"
+              style={{ fontSize: '0.8125rem', fontWeight: 600 }}
+            >
+              💈 دخول الحلاقين
+            </Link>
+          </div>
+        </footer>
       </div>
 
       {/* Booking modal */}
