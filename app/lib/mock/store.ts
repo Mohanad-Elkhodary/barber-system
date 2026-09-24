@@ -29,35 +29,7 @@ const DEFAULT_BARBERS: Barber[] = [
   },
 ];
 
-const DEFAULT_TICKETS: Ticket[] = [
-  {
-    id: 't1111111-1111-1111-1111-111111111111',
-    barber_id: 'b1111111-1111-1111-1111-111111111111',
-    number: 1,
-    status: 'serving',
-    customer_name: 'حسن إبراهيم',
-    phone: '+201012345670',
-    created_at: new Date(Date.now() - 30 * 60 * 1000).toISOString(),
-  },
-  {
-    id: 't2222222-2222-2222-2222-222222222222',
-    barber_id: 'b1111111-1111-1111-1111-111111111111',
-    number: 2,
-    status: 'waiting',
-    customer_name: 'خالد طارق',
-    phone: '+201012345671',
-    created_at: new Date(Date.now() - 20 * 60 * 1000).toISOString(),
-  },
-  {
-    id: 't3333333-3333-3333-3333-333333333333',
-    barber_id: 'b1111111-1111-1111-1111-111111111111',
-    number: 3,
-    status: 'waiting',
-    customer_name: 'عمر سعيد',
-    phone: '+201012345672',
-    created_at: new Date(Date.now() - 10 * 60 * 1000).toISOString(),
-  },
-];
+const DEFAULT_TICKETS: Ticket[] = [];
 
 class MockStore {
   barbers: Barber[] = JSON.parse(JSON.stringify(DEFAULT_BARBERS));
