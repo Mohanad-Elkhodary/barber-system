@@ -233,6 +233,29 @@ export default function HomePage() {
               💈 دخول الحلاقين
             </Link>
           </div>
+
+          <div
+            style={{
+              width: '100%',
+              textAlign: 'center',
+              paddingTop: 'var(--space-3)',
+              borderTop: '1px solid var(--border-glass)',
+              marginTop: 'var(--space-3)',
+            }}
+          >
+            <span
+              style={{
+                fontSize: '0.75rem',
+                color: 'var(--text-muted)',
+                letterSpacing: '0.03em',
+              }}
+            >
+              Developed by{' '}
+              <span style={{ color: 'var(--gold)', fontWeight: 600 }}>
+                Mohanad Elkhodary
+              </span>
+            </span>
+          </div>
         </footer>
       </div>
 
